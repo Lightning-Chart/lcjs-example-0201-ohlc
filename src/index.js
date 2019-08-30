@@ -58,6 +58,7 @@ series
     .setNegativeStyle( (figure) => figure
                                 .setStrokeStyle( (stroke) => stroke.setThickness(2) )
                             )
+    .setFigureWidth(10)
 // Add the created data array to the OHLC series.
 series.add(data)
 // Add a single data entry to the array.
