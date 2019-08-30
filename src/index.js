@@ -50,6 +50,14 @@ const data = [
     [new Date(2019, 7, 22).getTime(), 213.19, 214.44, 210.75, 212.46 ],
     [new Date(2019, 7, 23).getTime(), 209.43, 212.05, 201, 202.64 ]
 ]
+// Modify the bars for better visibility
+series
+    .setPositiveStyle( (figure) => figure
+                                .setStrokeStyle( (stroke) => stroke.setThickness(2) )
+                            )
+    .setNegativeStyle( (figure) => figure
+                                .setStrokeStyle( (stroke) => stroke.setThickness(2) )
+                            )
 // Add the created data array to the OHLC series.
 series.add(data)
 // Add a single data entry to the array.
@@ -62,4 +70,3 @@ chart.getDefaultAxisY()
 // Fit the X Axis around the given data. Passing false skips animating the fitting.
 chart.getDefaultAxisX()
     .fit(false)
-
