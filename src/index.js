@@ -1,4 +1,4 @@
-/**
+/*
  * LightningChartJS example that showcases creation of OHLC-chart.
  */
 // Import LightningChartJS

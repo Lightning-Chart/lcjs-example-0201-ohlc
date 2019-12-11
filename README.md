@@ -1,4 +1,4 @@
-# OHLC chart
+# OHLC Chart
 
 This demo application belongs to the set of examples for LightningChart JS, data visualization library for JavaScript.
 
@@ -14,7 +14,8 @@ The demo can be used as an example or a seed project. Local execution requires t
 
 - The application is available at *http://localhost:8080* in your browser, webpack-dev-server provides hot reload functionality.
 
-### Description
+
+## Description
 
 *Also known as Price Chart, Bar Chart*
 
@@ -48,7 +49,7 @@ const xohlc = [
 ohlcSeries.add(xohlc)
 ```
 
-add() can be called with a single XOHLC-object or with an array of them.
+`add()` can be called with a single XOHLC-object or with an array of them.
 
 ### Anatomy of a Bar figure
 
@@ -98,18 +99,19 @@ ohlcSeries
     )
 ```
 
-### API links
 
-* XY cartesian chart: [ChartXY][]
-* Axis tick strategies: [AxisTickStrategies][]
-* Scroll strategies: [AxisScrollStrategies][]
-* OHLC-Figure types: [OHLCFigures][]
-* OHLC series: [OHLCSeries][]
-* XOHLC datastructure: [XOHLC][]
-* OHLC generator: [OHLCGenerator][]
+## API Links
+
+* XY cartesian chart: [ChartXY]
+* Axis tick strategies: [AxisTickStrategies]
+* Scroll strategies: [AxisScrollStrategies]
+* Figure types: [OHLCFigures]
+* OHLC series: [OHLCSeries]
+* XOHLC datastructure: [XOHLC]
+* OHLC generator: [OHLCGenerator]
 
 
-### Support
+## Support
 
 If you notice an error in the example code, please open an issue on [GitHub][0] repository of the entire example.
 
@@ -121,18 +123,20 @@ If you think you found a bug in the LightningChart JavaScript library, please co
 
 Direct developer email support can be purchased through a [Support Plan][4] or by contacting sales@arction.com.
 
-© Arction Ltd 2009-2019. All rights reserved.
-
 [0]: https://github.com/Arction/
 [1]: https://www.arction.com/lightningchart-js-api-documentation/
 [2]: https://www.arction.com
 [3]: https://stackoverflow.com/questions/tagged/lightningchart
 [4]: https://www.arction.com/support-services/
 
-[AxisScrollStrategies]: https://www.arction.com/lightningchart-js-api-documentation/v1.1.0/globals.html#axisscrollstrategies
-[AxisTickStrategies]: https://www.arction.com/lightningchart-js-api-documentation/v1.1.0/globals.html#axistickstrategies
-[ChartXY]: https://www.arction.com/lightningchart-js-api-documentation/v1.1.0/classes/chartxy.html
-[OHLCFigures]: https://www.arction.com/lightningchart-js-api-documentation/v1.1.0/globals.html#ohlcfigures
+© Arction Ltd 2009-2019. All rights reserved.
+
+
+[ChartXY]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/classes/chartxy.html
+[AxisTickStrategies]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/globals.html#axistickstrategies
+[AxisScrollStrategies]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/globals.html#axisscrollstrategies
+[OHLCFigures]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/globals.html#ohlcfigures
+[OHLCSeries]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/classes/chartxy.html#addohlcseries
+[XOHLC]: https://www.arction.com/lightningchart-js-api-documentation/v1.2.0/globals.html#xohlc
 [OHLCGenerator]: https://arction.github.io/xydata/classes/ohlcgenerator.html
-[OHLCSeries]: https://www.arction.com/lightningchart-js-api-documentation/v1.1.0/classes/chartxy.html#addohlcseries
-[XOHLC]: https://www.arction.com/lightningchart-js-api-documentation/v1.1.0/globals.html#xohlc
+
