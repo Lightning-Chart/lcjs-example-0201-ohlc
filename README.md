@@ -53,7 +53,7 @@ ohlcSeries.add(xohlc)
 
 `add()` can be called with a single XOHLC-object or with an array of them.
 
-### Anatomy of a Bar figure
+## Anatomy of a Bar figure
 
 A bar figure is formed from three line segments, which can be styled with a single *LineStyle* object.
 
@@ -61,7 +61,7 @@ A bar figure is formed from three line segments, which can be styled with a sing
 
 ![](./assets/bar.png)
 
-### Figure styling
+## Figure styling
 
 OHLC Series provides an ability to specify styles for both positive and negative candlesticks individually. 
 
@@ -69,15 +69,21 @@ OHLC Series provides an ability to specify styles for both positive and negative
 // Width of both positive and negative candlesticks
 const figureWidth = 5.0
 // Green color filling
-const fillStylePositive = new SolidFill().setColor( ColorRGBA( 0, 128, 0 ) )
+const fillStylePositive = new SolidFill()
+    .setColor( ColorRGBA( 0, 128, 0 ) )
 // Lime color filling
-const fillStyleHighlightPositive = new SolidFill().setColor( ColorRGBA (0, 255, 0) )
+const fillStyleHighlightPositive = new SolidFill()
+    .setColor( ColorRGBA (0, 255, 0) )
 // Black color stroke
-const bodyStrokeStyle = new SolidLine().setFillStyle( new SolidFill().setColor( ColorRGBA( 0, 0, 0 ) ) ).setThickness( 1.0 )
+const bodyStrokeStyle = new SolidLine()
+    .setFillStyle( new SolidFill().setColor( ColorRGBA( 0, 0, 0 ) ) )
+    .setThickness( 1.0 )
 // Green color stroke
-const strokeStylePositive = new SolidLine().setFillStyle( new SolidFill().setColor( ColorRGBA( 0, 128, 0 ) ) )
+const strokeStylePositive = new SolidLine()
+    .setFillStyle( new SolidFill().setColor( ColorRGBA( 0, 128, 0 ) ) )
 // Lime color stroke
-const strokeStylePositiveHighlight = new SolidLine().setFillStyle( new SolidFill().setColor( ColorRGBA( 0, 240, 0 ) ) )
+const strokeStylePositiveHighlight = new SolidLine()
+    .setFillStyle( new SolidFill().setColor( ColorRGBA( 0, 240, 0 ) ) )
 
 ohlcSeries
 	// Setting width of figures
