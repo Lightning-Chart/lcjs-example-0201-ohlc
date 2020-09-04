@@ -10,18 +10,28 @@ const {
     AxisTickStrategies,
     OHLCFigures,
     AxisScrollStrategies,
-    emptyLine
+    emptyLine,
+    Themes
 } = lcjs
 
-// Create a XY Chart with DateTime X-axis.
+// Create a XY Chart.
 const chart = lightningChart().ChartXY({
-    defaultAxisXTickStrategy: AxisTickStrategies.DateTime()
+    // theme: Themes.dark
 })
-    .setTitle('Open-High-Low-Close')
-    .setAutoCursor(cursor => {
-        cursor.disposeTickMarkerY()
-        cursor.setGridStrokeYStyle(emptyLine)
-    })
+// Use DateTime TickStrategy for the X Axis, set current date as the origin.
+chart
+    .getDefaultAxisX()
+    .setTickStrategy(
+        AxisTickStrategies.DateTime,
+        (tickStrategy) => tickStrategy.setDateOrigin(new Date())
+    )
+
+chart.setTitle('Open-High-Low-Close')
+// Modify AutoCursor to only show TickMarker and GridLine over the X Axis.
+chart.setAutoCursor(cursor => {
+    cursor.disposeTickMarkerY()
+    cursor.setGridStrokeYStyle(emptyLine)
+})
 
 // Add a OHLC Series with Bar as type of figures.
 const series = chart.addOHLCSeries({ positiveFigure: OHLCFigures.Bar })
