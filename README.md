@@ -1,6 +1,6 @@
-# OHLC Chart
+# JavaScript OHLC Chart
 
-![OHLC Chart](ohlc.png)
+![JavaScript OHLC Chart](ohlc.png)
 
 This demo application belongs to the set of examples for LightningChart JS, data visualization library for JavaScript.
 
