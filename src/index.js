@@ -16,7 +16,7 @@ const {
 
 // Create a XY Chart.
 const chart = lightningChart().ChartXY({
-    // theme: Themes.dark
+    // theme: Themes.darkGold
 })
 // Use DateTime TickStrategy for the X Axis, set current date as the origin.
 chart
