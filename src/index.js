@@ -5,37 +5,24 @@
 const lcjs = require('@arction/lcjs')
 
 // Extract required parts from LightningChartJS.
-const {
-    lightningChart,
-    AxisTickStrategies,
-    OHLCFigures,
-    AxisScrollStrategies,
-    emptyLine,
-    Themes
-} = lcjs
+const { lightningChart, AxisTickStrategies, OHLCFigures, AxisScrollStrategies, emptyLine, Themes } = lcjs
 
 // Create a XY Chart.
 const chart = lightningChart().ChartXY({
     // theme: Themes.darkGold
 })
 // Use DateTime TickStrategy for the X Axis, set current date as the origin.
-chart
-    .getDefaultAxisX()
-    .setTickStrategy(
-        AxisTickStrategies.DateTime,
-        (tickStrategy) => tickStrategy.setDateOrigin(new Date())
-    )
+chart.getDefaultAxisX().setTickStrategy(AxisTickStrategies.DateTime, (tickStrategy) => tickStrategy.setDateOrigin(new Date()))
 
 chart.setTitle('Open-High-Low-Close')
 // Modify AutoCursor to only show TickMarker and GridLine over the X Axis.
-chart.setAutoCursor(cursor => {
-    cursor.disposeTickMarkerY()
+chart.setAutoCursor((cursor) => {
+    cursor.setTickMarkerYVisible(false)
     cursor.setGridStrokeYStyle(emptyLine)
 })
 
 // Add a OHLC Series with Bar as type of figures.
-const series = chart.addOHLCSeries({ positiveFigure: OHLCFigures.Bar })
-    .setName('Open-High-Low-Close')
+const series = chart.addOHLCSeries({ positiveFigure: OHLCFigures.Bar }).setName('Open-High-Low-Close')
 // Create an array of XOHLC tuples (See API documentation) to use with the OHLC Series
 //The XOHLC tuple consists of five different values; position on X Axis (in this case, the date of each entry), the open, high, low and close values.
 const data = [
@@ -58,26 +45,22 @@ const data = [
     [new Date(2019, 7, 20).getTime(), 210.88, 213.35, 210.32, 210.36],
     [new Date(2019, 7, 21).getTime(), 212.99, 213.65, 211.6, 212.64],
     [new Date(2019, 7, 22).getTime(), 213.19, 214.44, 210.75, 212.46],
-    [new Date(2019, 7, 23).getTime(), 209.43, 212.05, 201, 202.64]
+    [new Date(2019, 7, 23).getTime(), 209.43, 212.05, 201, 202.64],
 ]
 // Modify the bars for better visibility
 series
-    .setPositiveStyle((figure) => figure
-        .setStrokeStyle((stroke) => stroke.setThickness(2))
-    )
-    .setNegativeStyle((figure) => figure
-        .setStrokeStyle((stroke) => stroke.setThickness(2))
-    )
+    .setPositiveStyle((figure) => figure.setStrokeStyle((stroke) => stroke.setThickness(2)))
+    .setNegativeStyle((figure) => figure.setStrokeStyle((stroke) => stroke.setThickness(2)))
     .setFigureWidth(10)
 // Add the created data array to the OHLC series.
 series.add(data)
 // Add a single data entry to the array.
 series.add([new Date(2019, 7, 26).getTime(), 205.86, 207.19, 205.06, 206.49])
 // Change the title and behavior of the default Y Axis
-chart.getDefaultAxisY()
+chart
+    .getDefaultAxisY()
     .setTitle('USD')
-    .setInterval(195, 220)
+    .setInterval({ start: 195, end: 220, stopAxisAfter: false })
     .setScrollStrategy(AxisScrollStrategies.expansion)
 // Fit the X Axis around the given data. Passing false skips animating the fitting.
-chart.getDefaultAxisX()
-    .fit(false)
+chart.getDefaultAxisX().fit(false)
