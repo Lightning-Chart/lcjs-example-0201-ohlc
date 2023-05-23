@@ -21,6 +21,9 @@ The demo can be used as an example or a seed project. Local execution requires t
 
 _Also known as Price Chart, Bar Chart_
 
+**Please note that using LightningChart JS for Trading use cases requires a special license agreement.**
+For more information, please [contact us](https://lightningchart.com/contact/).
+
 ## What does OHLC chart mean?
 
 OHLC stands for open, high, low, and close. OHLC charts are important because they show the value of a stock over time. The opening price is the price at which a stock was first traded for the day, and it will usually be either higher or lower than the previous day's closing price, depending on how well the stock market has done. The highest price is simply the maximum amount that a share can sell for in order to buy. The lowest point is called the low, and it's simply what it sounds like: the lowest point of trading for that given day.
@@ -144,11 +147,11 @@ Direct developer email support can be purchased through a [Support Plan][4] or b
 © LightningChart Ltd 2009-2022. All rights reserved.
 
 
-[XY cartesian chart]: https://lightningchart.com/lightningchart-js-api-documentation/v4.0.0/classes/ChartXY.html
-[Axis tick strategies]: https://lightningchart.com/lightningchart-js-api-documentation/v4.0.0/variables/AxisTickStrategies.html
-[Scroll strategies]: https://lightningchart.com/lightningchart-js-api-documentation/v4.0.0/variables/AxisScrollStrategies.html
-[Figure types]: https://lightningchart.com/lightningchart-js-api-documentation/v4.0.0/variables/OHLCFigures.html
-[OHLC series]: https://lightningchart.com/lightningchart-js-api-documentation/v4.0.0/classes/ChartXY.html#addOHLCSeries
-[XOHLC datastructure]: https://lightningchart.com/lightningchart-js-api-documentation/v4.0.0/types/XOHLC.html
+[XY cartesian chart]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/classes/ChartXY.html
+[Axis tick strategies]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/variables/AxisTickStrategies.html
+[Scroll strategies]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/variables/AxisScrollStrategies.html
+[Figure types]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/variables/OHLCFigures.html
+[OHLC series]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/classes/ChartXY.html#addOHLCSeries
+[XOHLC datastructure]: https://lightningchart.com/lightningchart-js-api-documentation/v4.1.0/types/XOHLC.html
 [OHLC generator]: https://arction.github.io/xydata/classes/ohlcgenerator.html
 

@@ -11,8 +11,8 @@ const { lightningChart, AxisTickStrategies, OHLCFigures, AxisScrollStrategies, e
 const chart = lightningChart().ChartXY({
     // theme: Themes.darkGold
 })
-// Use DateTime TickStrategy for the X Axis, set current date as the origin.
-chart.getDefaultAxisX().setTickStrategy(AxisTickStrategies.DateTime, (tickStrategy) => tickStrategy.setDateOrigin(new Date()))
+// Use DateTime TickStrategy for the X Axis
+chart.getDefaultAxisX().setTickStrategy(AxisTickStrategies.DateTime)
 
 chart.setTitle('Open-High-Low-Close')
 // Modify AutoCursor to only show TickMarker and GridLine over the X Axis.
