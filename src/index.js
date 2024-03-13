@@ -9,7 +9,7 @@ const { lightningChart, AxisTickStrategies, OHLCFigures, AxisScrollStrategies, e
 
 // Create a XY Chart.
 const chart = lightningChart().ChartXY({
-    theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined,
+    theme: Themes[new URLSearchParams(window.location.search).get('theme') || 'darkGold'] || undefined
 })
 // Use DateTime TickStrategy for the X Axis
 chart.getDefaultAxisX().setTickStrategy(AxisTickStrategies.DateTime)
