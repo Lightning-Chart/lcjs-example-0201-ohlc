@@ -2,7 +2,7 @@
  * LightningChartJS example that showcases creation of OHLC-chart.
  */
 // Import LightningChartJS
-const lcjs = require('@arction/lcjs')
+const lcjs = require('@lightningchart/lcjs')
 
 // Extract required parts from LightningChartJS.
 const { lightningChart, AxisTickStrategies, OHLCFigures, AxisScrollStrategies, emptyLine, Themes } = lcjs
@@ -18,7 +18,7 @@ chart.getDefaultAxisX().setTickStrategy(AxisTickStrategies.DateTime)
 
 chart.setTitle('Open-High-Low-Close')
 // Modify AutoCursor to only show TickMarker and GridLine over the X Axis.
-chart.setAutoCursor((cursor) => {
+chart.setCursor((cursor) => {
     cursor.setTickMarkerYVisible(false)
     cursor.setGridStrokeYStyle(emptyLine)
 })
