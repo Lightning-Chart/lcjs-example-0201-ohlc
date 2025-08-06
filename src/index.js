@@ -5,7 +5,7 @@
 const lcjs = require('@lightningchart/lcjs')
 
 // Extract required parts from LightningChartJS.
-const { lightningChart, AxisTickStrategies, OHLCFigures, AxisScrollStrategies, emptyLine, Themes } = lcjs
+const { lightningChart, AxisTickStrategies, OHLCSeriesTypes, AxisScrollStrategies, emptyLine, Themes } = lcjs
 
 // Create a XY Chart.
 const chart = lightningChart({
@@ -24,7 +24,7 @@ chart.setCursor((cursor) => {
 })
 
 // Add a OHLC Series with Bar as type of figures.
-const series = chart.addOHLCSeries({ positiveFigure: OHLCFigures.Bar }).setName('Open-High-Low-Close')
+const series = chart.addOHLCSeries({ type: OHLCSeriesTypes.Bar }).setName('Open-High-Low-Close')
 // Create an array of XOHLC tuples (See API documentation) to use with the OHLC Series
 //The XOHLC tuple consists of five different values; position on X Axis (in this case, the date of each entry), the open, high, low and close values.
 const data = [
@@ -51,8 +51,8 @@ const data = [
 ]
 // Modify the bars for better visibility
 series
-    .setPositiveStyle((figure) => figure.setStrokeStyle((stroke) => stroke.setThickness(2)))
-    .setNegativeStyle((figure) => figure.setStrokeStyle((stroke) => stroke.setThickness(2)))
+    .setTailStrokeStylePositive((stroke) => stroke.setThickness(2))
+    .setTailStrokeStyleNegative((stroke) => stroke.setThickness(2))
     .setFigureWidth(10)
 // Add the created data array to the OHLC series.
 series.add(data)
