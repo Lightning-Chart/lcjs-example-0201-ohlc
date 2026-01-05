@@ -74,7 +74,7 @@ A bar figure is formed from three line segments, which can be styled with a sing
 
 [//]: # 'IMPORTANT: The assets will not show before README.md is built - relative path is different!'
 
-![](./assets/bar.png)
+![Bars](./assets/bar.png)
 
 ## Figure styling
 
